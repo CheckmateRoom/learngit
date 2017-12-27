@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.min.js"></script>
+	<style>
+		.c1{
+			border: 1px solid #000;
+			height:50px;
+		}
+		.c2{
+			display:inline;
+			border: 1px solid #000;
+		}
+		.c2 img{
+			width: 22px;
+		
+		}
+		.c3{
+			display:inline;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="c1">
+		<div class="c2"><img src="../Desktop/Project3/vue三阶段项目/资料/imgs/bg.png" alt=""></div>
+		<div class="c3" onclick="show()">222</div>
+	</div>
+</body>
+<script>
+
+	function show(){
+		console.log('11');
+			$.ajax({
+				type:"POST",
+				url:"http://www.artcm.cn/login/weixin",
+				//data:params,
+				dataType:"jsonp",
+				jsonpCallback:"handle",
+				success:function(data){
+					console.log(data);
+				}
+			})
+		}
+</script>
+</html>
